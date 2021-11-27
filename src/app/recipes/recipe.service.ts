@@ -7,13 +7,13 @@ import { Subject } from 'rxjs';
 export class RecipeService{
 public selectedRecipe = new Subject<Recipe>();
 public recipesUpdated = new Subject<Recipe[]>();
-private recipes: Recipe[] = [];
-// private recipes: Recipe[] = [ new Recipe('testname', 'test describe',
-// "https://image.shutterstock.com/image-vector/home-cooking-recipe-bruschetta-step-260nw-390871786.jpg",
-// [new Ingredient('eggs',10), new Ingredient('wheat',4)]),
-// new Recipe('testname 2', 'test describe 2',
-// "https://image.shutterstock.com/image-vector/home-cooking-recipe-bruschetta-step-260nw-390871786.jpg", 
-// [new Ingredient('breads',5), new Ingredient('rice',3)])]
+// private recipes: Recipe[] = [];
+private recipes: Recipe[] = [ new Recipe('testname', 'test describe',
+"https://image.shutterstock.com/image-vector/home-cooking-recipe-bruschetta-step-260nw-390871786.jpg",
+[new Ingredient('eggs',10), new Ingredient('wheat',4)]),
+new Recipe('testname 2', 'test describe 2',
+"https://image.shutterstock.com/image-vector/home-cooking-recipe-bruschetta-step-260nw-390871786.jpg", 
+[new Ingredient('breads',5), new Ingredient('rice',3)])]
 
 getRecipes(){
     return this.recipes.slice();
